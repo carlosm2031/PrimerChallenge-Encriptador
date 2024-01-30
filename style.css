@@ -36,77 +36,104 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    .input {
-        width: 60%;
-        min-height: 500px;
-        resize: vertical;
-        padding-top: 100px;
-        font-size: 32px;
-        border: none;
-        box-sizing: border-box;
-        background-color: transparent;
-        color: #0A3871;
-        outline: none;
-        resize: none;
-    }
-
-    .alert {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        margin-top: 300px;
-        margin-left: -470px;
-        gap: 5px;
-
-        div {
-            background: #0A3871;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            text-align: center;
-            padding: 2px;
-        }
-
-        p {
-            color: #495057;
-        }
-    }
-
-    /* Botones */
-    .buttons {
-        display: flex;
-        gap: 20px;
-        flex: 2;
-
-        .encrypt {
-            width: 328px;
-            height: 67px;
-            border-radius: 24px;
-            background-color: #0A3871;
-            color: white;
-        }
-
-        .encrypt:hover {
-            background-color: #072B61;
-        }
-
-        .decrypt {
-            width: 328px;
-            height: 67px;
-            border-radius: 24px;
-            border: 1px solid #0A3871;
-            background-color: transparent;
-        }
-
-        .decrypt:hover {
-            background-color: #EFF1FA;
-            border: 1px solid #0A3871;
-        }
-    }
 }
 
-/* Texto de encriptado */
+/* Input de texto */
+.main-container .input {
+    width: 60%;
+    min-height: 500px;
+    resize: vertical;
+    padding-top: 100px;
+    font-size: 32px;
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #0A3871;
+    outline: none;
+    resize: none;
+}
+
+/* Alerta */
+.main-container .alert {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 300px;
+    margin-left: -470px;
+    gap: 5px;
+}
+
+.main-container .alert div {
+    background: #0A3871;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    text-align: center;
+    padding: 2px;
+}
+
+.main-container .alert p {
+    color: #495057;
+}
+
+/* Botones */
+.main-container .buttons {
+    display: flex;
+    gap: 20px;
+    flex: 2;
+}
+
+.main-container .buttons .encrypt,
+.main-container .buttons .decrypt {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+}
+
+.main-container .buttons .encrypt {
+    background-color: #0A3871;
+    color: white;
+}
+
+.main-container .buttons .encrypt:hover {
+    background-color: #072B61;
+}
+
+.main-container .buttons .decrypt {
+    border: 1px solid #0A3871;
+    background-color: transparent;
+}
+
+.main-container .buttons .decrypt:hover {
+    background-color: #EFF1FA;
+    border: 1px solid #0A3871;
+}
+
+/* Texto encriptado */
+.texto-encriptado {
+    font-size: 24px;
+    padding: 40px;
+    color: #495057;
+    height: 700px;
+}
+
+/* Botón copiar y clic desencriptar */
+.boton-copiar,
+.clic-desencriptar {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    background-color: transparent;
+}
+
+.boton-copiar:hover,
+.clic-desencriptar:hover {
+    background-color: #EFF1FA;
+    border: 1px solid #0A3871;
+}
+
+/* Contenedor de encriptado */
 .encript-container {
     height: auto;
     background-color: white;
@@ -114,7 +141,6 @@ body, html {
     height: 900px;
     width: 400px;
     margin-top: 60px;
-    
     margin-right: 60px;
     display: flex;
     flex-direction: column;
@@ -130,4 +156,112 @@ body, html {
 
 .encript-container p:nth-child(2) {
     color: #574949;
+}
+
+
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+    *{
+        margin:  0px;
+        padding: 0px; 
+    }
+    .container{
+        background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        height: 100%;
+        gap: 10px;
+    
+
+        .logo-container{
+            margin: 0px;
+            width: 95%;
+            height: 10px;
+        }
+
+        .main-container{
+            background-color: blue;
+            margin: 0px;
+            width: 95%;
+
+            height: 1900px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .input{
+
+            }
+
+            .alert{
+                background-color: white;
+                margin-top: 0px;
+                margin-left: 0px;
+                align-self: self-start;
+                margin-left: 15px;
+            }
+
+            .buttons{
+                background-color: red;
+                margin:  0px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .encript-container{
+            background-color: green;
+            margin: 0px;
+            padding: 0px;
+            width: 95%;
+            height: auto;
+
+
+            img{
+                display: none;
+            }
+
+            p{
+                margin: 0px;
+                padding: 0px;
+            }
+
+        }
+    }
+
+    
+
+} */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .container {
+        height: 100vh; /* Altura completa de la pantalla */
+        overflow: hidden; /* Evitar el scroll */
+        background-color: aqua;
+        flex-direction: column; /* Cambiar la dirección de flexión a columna */
+    }
+
+    .logo-container {
+        height: 5%; /* 5% de la altura del padre */
+        background-color: red;
+    }
+
+    .main-container {
+        height: 80%; /* 80% de la altura del padre */
+        
+        background-color: blue;
+    }
+
+    .encript-container {
+        height: 15%; /* 15% de la altura del padre */
+        background-color: green;
+
+        img{
+            display: none;
+        }
+    }
 }

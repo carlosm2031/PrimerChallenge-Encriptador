@@ -16,14 +16,13 @@
             
             <textarea class="input" placeholder="Ingresa tu texto aquí..."></textarea>
 
-
             <div class="alert">
                 <div>!</div>
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="buttons">
                 <button onclick="obtenerTexto()" class="encrypt">Encriptar</button>
-                <button class="decrypt">Desencriptar</button>
+                <button onclick="devolverTexto()" class="decrypt">Desencriptar</button>
             </div>
             
         </div>
@@ -33,6 +32,7 @@
             <p><b>Ningún mensaje fue encontrado</b></p>
             <p>Ingresa el texto que desees encriptar o desencriptar</p>
         </div>
+
     </div>
 
     <script src="app.js"></script>
